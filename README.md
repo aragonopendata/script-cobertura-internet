@@ -1,3 +1,5 @@
+> **Warning**:
+> Queda pendiente adaptar el README.md de este repositorio a las reglas y criterios de Aragón Open Data
 # De Vodafone API a PostgreSQL con mapa incluido
 ## Intención
 Se pretende el siguiente flujo:
