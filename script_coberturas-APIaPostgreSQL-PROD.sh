@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script por: ddemingo (por si tiene cualquier duda sobre el script)
+# Script por: danidemingo (por si tiene cualquier duda sobre el script)
 # NOTA: Este script se ejecuta automáticamente, no requiere entrada por parte del usuario mas que rellenar correctamente las variables abajo descritas.
 
 source ./script_coberturas-APIaPostgreSQL-PROD-variables.sh
