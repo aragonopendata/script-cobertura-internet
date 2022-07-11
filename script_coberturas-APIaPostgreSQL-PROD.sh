@@ -21,7 +21,7 @@ else
 fi
 
 echo "-Importamos el CSV que hemos descargado a la tabla: $tablaBBDD-"
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $esquemaBBDD.$tablaBBDD (fecha, categoria, calidad, municipio, ine, modelo, so, tipored, operador, coordenadax, coordenaday, latitud, longitud, valorintensidadsenial, rangointesidadsenial, velocidadbajada, rangovelocidadbajada, velocidadsubida, rangovelocidadsubida, latencia, rangolatencia) FROM $rutaficheroCSV DELIMITER ';' CSV;" && echo "-CSV importado correctamente-" || echo "-Ha habido un problema al importar el CSV-" #; exit 1
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $esquemaBBDD.$tablaBBDD (fecha, categoria, calidad, municipio, ine, modelo, so, tipored, operador, coordenadax, coordenaday, latitud, longitud, valorintensidadsenial, rangointensidadsenial, velocidadbajada, rangovelocidadbajada, velocidadsubida, rangovelocidadsubida, latencia, rangolatencia) FROM $rutaficheroCSV DELIMITER ';' CSV;" && echo "-CSV importado correctamente-" || echo "-Ha habido un problema al importar el CSV-" #; exit 1
 
 # Este comando hace el POINT de los campos latitud y longitud de la tabla. Por tanto, los datos de la tabla deben de importarse antes de hacer este comando para que los campos latitud y longitud estén llenos.
 echo "-Poblamos la columna geom utilizando las columnas latitud y longitud de esta misma tabla-"
