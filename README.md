@@ -16,4 +16,4 @@ Ahora sí, pegaremos la línea del cron arriba descrita con el patrón de actual
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/cron.png)
 
 ## Licencia
-Este proyecto está sujeto a la European Union Public License (EUPL), como así se podrá encontrar en el archivo [LICENSE.md](./LICENSE.md)
+Este proyecto está sujeto a la European Union Public License (EUPL), como así se podrá encontrar en el archivo: [LICENSE.md](./LICENSE.md)
