@@ -186,9 +186,3 @@ Son «licencias compatibles» con arreglo al artículo 5 de la EUPL:
 La Comisión Europea podrá actualizar el presente apéndice a versiones posteriores de las licencias mencionadas sin presentar una nueva versión de la EUPL, siempre que contemplen los derechos reconocidos en el artículo 2 de la presente licencia y protejan de la apropiación exclusiva el código fuente cubierto.
 
 Cualquier otra modificación o adición al presente apéndice exigirá la presentación de una nueva versión de la EUPL.
-
-* * *
-
-_This website is not sponsored or endorsed by the [European Commission](https://ec.europa.eu/) or any other institution, body or agency of the [European Union](http://europa.eu/)._
-
-Created by [Javier Casares](https://www.javiercasares.com/) under license [EUPL 1.2](https://eupl.eu/).
