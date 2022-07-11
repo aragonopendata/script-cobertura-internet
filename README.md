@@ -15,9 +15,9 @@ Ahora sí, pegaremos la línea del cron arriba descrita con el patrón de actual
 
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/cron.png)
 
-Es interesante saber que "1 * * * *" querrá decir que el comando se ejecutará en el minuto 1 de todas las horas, mientras que "*/1 * * * *" quiere decir que se ejecutará cada minuto.
+Es interesante saber que "1 * * * *" querrá decir que el comando se ejecutará en el minuto 1 de todas las horas, mientras que "*\/1 * * * *" quiere decir que se ejecutará cada minuto.
 
-Lo mismo pasa con las horas; "* 1 * * *" querrá decir que el comando se ejecutará a la 1:00 AM, mientras que "* */1 * * *" quiere decir que se ejecutará cada hora
+Lo mismo pasa con las horas; "* 1 * * *" querrá decir que el comando se ejecutará a la 1:00 AM, mientras que "* *\/1 * * *" quiere decir que se ejecutará cada hora
 
 Se pueden combinar entre sí, dando multitud de opciones.
 
