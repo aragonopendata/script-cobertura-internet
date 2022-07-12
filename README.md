@@ -42,7 +42,7 @@ En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD
 
 ## Automatización
 ### ¿Cómo la haremos?
-Este proyecto **se automatizará con el demonio cron**. A continuación se ve un ejemplo de cómo proceder con dicha automatización.
+Este proyecto **se automatizará con el demonio cron**. A continuación se verá un ejemplo de cómo proceder con dicha automatización.
 ### ¿Por qué añadimos 2>&1 y qué quiere decir?
 **Se añade "2>&1"** al final para **mostrar** tanto **stdout como stderr**, para que así **podamos ver** en el log **cualquier error**, **incluyendo** los **errores que pueda provocar el sistema** y que no estén contemplados en el script a través de los "OR".
 ### Automatizaciones cada X minutos
