@@ -5,7 +5,7 @@
 source ./script_coberturas-APIaPostgreSQL-PROD-variables.sh
 
 # Este comando borra el contenido de la tabla
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "DELETE FROM $tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" #; exit 1
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE TABLE $tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" #; exit 1
 
 echo "-Descargamos el CSV de todos los datos de cobertura mediante la API"
 
