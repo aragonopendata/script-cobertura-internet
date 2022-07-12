@@ -2,6 +2,11 @@
 > Proyecto en pruebas 👷‍♀️🚧👷‍. **No cambiar visualización a repositorio público**
 # De Vodafone API a PostgreSQL con mapa incluido
 
+## Intención
+Se pretende el siguiente flujo:
+
+![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/schema.png)
+
 ## Creación de la tabla
 Procederemos a **crear la tabla** desde la que después partiremos:
 ```sql
@@ -29,11 +34,6 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         rangolatencia int4
 );
 ```
-
-## Intención
-Se pretende el siguiente flujo:
-
-![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/schema.png)
 
 ## Explicación
 El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** **contiene todas las variables necesarias** para que el script del proyecto funcione correctamente. Asimismo se explica qué función tiene cada variable.
