@@ -66,7 +66,7 @@ En  ejemplo se muestra una actualización de 5 minutos. Es decir, cada 5 minutos
 
 **INPUT:** ```*/5 * * * * [RUTA AL SCRIPT.sh] > /var/log/`date +\%G\%m\%d`.log 2>&1```
 
-**OUTPUT:** El script se ejecutará y dejará un log como el siguiente ejemplo: /var/log/script-cobertura-internet/220724.log cuyo formato quiere decir AÑOMESDÍA.log, para lo cual **primero de todo debemos crear la carpeta /var/log/script-cobertura-internet** con el comando: ```sudo mkdir /var/log/script-cobertura-internet``` y dar permisos de escritura al usuario con el que estemos trabajando con el comando: ```sudo chown [TU USUARIO]:[TU USUARIO] /var/log/script-cobertura-internet```, es decir, por ejemplo: ```sudo chown pedro:pedro /var/log/script-cobertura-internet```
+**OUTPUT:** El script se ejecutará y dejará un log como el siguiente ejemplo: /var/log/script-cobertura-internet/220724.log cuyo formato quiere decir AÑOMESDÍA.log, para lo cual **primero de todo debemos crear la carpeta /var/log/script-cobertura-internet** con el comando: ```sudo mkdir /var/log/script-cobertura-internet``` y dar permisos de escritura al usuario con el que estemos trabajando con el comando: ```sudo chown [TU USUARIO]:[TU USUARIO] /var/log/script-cobertura-internet```, es decir, por ejemplo: ```sudo chown pedro:pedro /var/log/script-cobertura-internet``` (aquí realmente estamos cambiando el autor de la carpeta /var/log/script-cobertura-internet de root:root a pedro:pedro, o el usuario que hayas introducido. Así tendremos permisos de escritura sobre esta carpeta
 
 #### ¿Cómo las añadimos al cron?
 **Para añadirlo al cron ejecutamos:**
