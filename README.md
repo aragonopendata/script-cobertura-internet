@@ -36,8 +36,19 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
 ```
 
 ## Explicación
+### Script para las variables
 El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** **contiene todas las variables necesarias** para que el script del proyecto funcione correctamente. Asimismo se explica qué función tiene cada variable.
+#### Variable urlAPI
+La variable urlAPI se consigue mediante la aplicación web Swagger, publicada en Aragon Open Data. Se muestra dicho proceso de obtención:
+##### Obtención
+La existencia de esta sección tiene como objetivo mantener la url de la variable urlAPI actualizada aún en en el caso de que ésta cambie.
 
+Para obtener la url de la API y rellenar la variable urlAPI nos dirigiremos a: https://opendataei2a.aragon.es/cobertura/api/swagger/index.html
+Uniremos los campos marcados en rojo tal y como se muestra en la siguiente imagen:
+![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/swagger.png)
+La URL final, por tanto, sería: https://opendataei2a.aragon.es/cobertura/api/ + data/getData quedándose en: https://opendataei2a.aragon.es/cobertura/api/data/getData
+
+### Script general
 En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh) se explica la ejecución del script** paso a paso.
 
 ## Automatización
