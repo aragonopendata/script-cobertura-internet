@@ -3,7 +3,7 @@
 # De Vodafone API a PostgreSQL con mapa incluido
 
 ## Creación de la tabla
-Procederemos a **crear la tabla** que después poblaremos:
+Procederemos a **crear la tabla** desde la que después partiremos:
 ```sql
 CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         fecha timestamp,
