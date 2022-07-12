@@ -45,6 +45,7 @@ La existencia de esta sección tiene como objetivo mantener la url de la variabl
 
 Para obtener la url de la API y rellenar la variable urlAPI nos dirigiremos a: https://opendataei2a.aragon.es/cobertura/api/swagger/index.html
 Uniremos los campos marcados en rojo tal y como se muestra en la siguiente imagen:
+
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/swagger.png)
 La URL final, por tanto, sería: https://opendataei2a.aragon.es/cobertura/api/ + data/getData quedándose en: https://opendataei2a.aragon.es/cobertura/api/data/getData
 
