@@ -1,3 +1,7 @@
+# IMPORTANTE
+
+**La presente licencia** constituye la versión disponible a fecha de inclusión de este archivo y **se ofrece con fines de accesibilidad en cuanto a la facilidad de acceder a la misma**. Sin embargo, sobre lo expuesto en el archivo **script-cobertura-internet/[LICENSE.md](./LICENSE.md)** (este archivo) **siempre prevalecerá la licencia publicada en: https://joinup.ec.europa.eu/collection/eupl**, sitio que enlaza a la última versión de la EUPL, disponible en 22 idiomas.
+
 LICENCIA PÚBLICA DE LA UNIÓN EUROPEA v. 1.2
 ===========================================
 
