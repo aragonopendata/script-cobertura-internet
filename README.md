@@ -1,6 +1,7 @@
 > **Warning**:
 > Proyecto en pruebas 👷‍♀️🚧👷‍. **No cambiar visualización a repositorio público**
-> > **Note**
+
+> **Note**
 > Se deberán separar ciertas secciones de este README.md que quedarán para el README.md privado y se eliminarán del README.md público
 # De Vodafone API a PostgreSQL con mapa incluido
 
