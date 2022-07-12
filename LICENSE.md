@@ -6,7 +6,7 @@
 
 LICENCIA PÚBLICA DE LA UNIÓN EUROPEA v. 1.2
 ===========================================
-Actualizado: 12/07/2022
+Actualizado: 11/07/2022
 
 
 EUPL © Unión Europea 2007, 2016
