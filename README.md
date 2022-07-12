@@ -66,7 +66,7 @@ Lo mismo pasa con las horas; "\* 1 \* \* \*" querrá decir que el comando se eje
 
 Se pueden combinar entre sí, dando multitud de opciones.
 
-## Infraestructura utilizada para este proyecto
+## Infraestructura necesaria para este proyecto
 - DBeaver (https://dbeaver.io/): Gestor de bases de datos
 - Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas)
 
