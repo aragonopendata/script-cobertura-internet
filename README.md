@@ -80,8 +80,14 @@ Lo mismo pasa con las horas; "\* 1 \* \* \*" querrá decir que el comando se eje
 Se pueden combinar entre sí, dando multitud de opciones.
 
 ## Infraestructura necesaria para este proyecto
-- DBeaver (https://dbeaver.io/): Gestor de bases de datos
-- Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas)
+- (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS. Por ejemplo, DBeaver (https://dbeaver.io/)
+- (Requerido) Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas) con comandos:
+    - curl
+    - psql
+    - sed
+    - grep
+    - head
+- los cuales son comandos básicos que se incluyen prácticamente siempre, como se ha mencionado anteriormente.
 
 ## Licencia
 Este proyecto está sujeto a la **European Union Public License (EUPL)**, como así se podrá encontrar en el archivo: **script-cobertura-internet/[LICENSE.md](./LICENSE.md)**
