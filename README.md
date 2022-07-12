@@ -2,7 +2,7 @@
 > Proyecto en pruebas 👷‍♀️🚧👷‍. **No cambiar visualización a repositorio público**
 
 > **Note**
-> Se deberán separar ciertas secciones de este README.md que quedarán para el README.md privado y se eliminarán del README.md público
+> Se deberán separar ciertas secciones de este README.md que quedarán para el README.md privado y se eliminarán del README.md público. Es decir, aquí se puede encontrar una mezcla de ambos.
 # De Vodafone API a PostgreSQL con mapa incluido
 
 ## Intención
