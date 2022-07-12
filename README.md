@@ -45,7 +45,7 @@ El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-va
 #### Variable urlAPI
 La variable urlAPI se consigue mediante la aplicación web Swagger, publicada en Aragon Open Data. Se muestra dicho proceso de obtención:
 ##### Obtención
-La existencia de esta sección tiene como objetivo mantener la url de la variable urlAPI actualizada aún en en el caso de que ésta cambie.
+**La existencia de esta sección tiene como objetivo mantener la url de la variable urlAPI actualizada aún en en el caso de que ésta cambie.**
 
 Para obtener la url de la API y rellenar la variable urlAPI nos dirigiremos a: https://opendataei2a.aragon.es/cobertura/api/swagger/index.html
 Uniremos los campos marcados en rojo tal y como se muestra en la siguiente imagen:
