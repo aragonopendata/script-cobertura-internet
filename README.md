@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         rangovelocidadsubida int4,
         latencia float8,
         rangolatencia int4,
-        geometry(geometry, 4326)
+        geometry (geometry, 4326)
 );
 ```
 
