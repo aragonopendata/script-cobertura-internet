@@ -36,8 +36,9 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
 );
 ```
 
-## Logs
+## Logs (duplicado en Automatización. Este apartado quedará para README.md público, y Automatización para el README.md privado)
 Guardaremos un archivo de log en /var/log/script-cobertura-internet/AÑOMESDÍA.log
+Para ello debemos crear la carpeta /var/log/script-cobertura-internet con el comando: ```sudo mkdir /var/log/script-cobertura-internet``` y dar permisos de escritura al usuario con el que estemos trabajando con el comando: ```sudo chown [TU USUARIO]:[TU USUARIO] /var/log/script-cobertura-internet```, es decir, por ejemplo: ```sudo chown pedro:pedro /var/log/script-cobertura-internet``` (aquí realmente estamos cambiando el autor de la carpeta /var/log/script-cobertura-internet de root:root a pedro:pedro, o el usuario que hayas introducido. Así tendremos permisos de escritura sobre esta carpeta
 
 ## Explicación
 ### Script para las variables
