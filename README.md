@@ -1,6 +1,35 @@
 > **Warning**:
 > Proyecto en pruebas 👷‍♀️🚧👷‍. **No cambiar visualización a repositorio público**
 # De Vodafone API a PostgreSQL con mapa incluido
+
+## Creación de la tabla
+Procederemos a **crear la tabla** que después poblaremos:
+```sql
+CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
+        fecha timestamp,
+        categoria varchar,
+        calidad varchar,
+        municipio varchar,
+        ine int4,
+        modelo varchar,
+        so varchar,
+        tipored varchar,
+        operador varchar,
+        coordenadax int4,
+        coordenaday int4,
+        latitud float8,
+        longitud float8,
+        valorintensidadsenial float8,
+        rangointensidadsenial int4,
+        velocidadbajada float8,
+        rangovelocidadbajada int4,
+        velocidadsubida float8,
+        rangovelocidadsubida int4,
+        latencia float8,
+        rangolatencia int4
+);
+```
+
 ## Intención
 Se pretende el siguiente flujo:
 
