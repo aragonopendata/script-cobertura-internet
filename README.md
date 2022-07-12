@@ -83,7 +83,7 @@ Lo mismo pasa con las horas; "\* 1 \* \* \*" querrá decir que el comando se eje
 Se pueden combinar entre sí, dando multitud de opciones.
 
 ## Infraestructura necesaria para este proyecto
-- (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS. Por ejemplo, DBeaver (https://dbeaver.io/)
+- (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS para ir viendo los cambios mediante una GUI. Por ejemplo, DBeaver (https://dbeaver.io/)
 - (Requerido) Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas) con comandos:
     - curl
     - psql
