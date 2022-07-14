@@ -87,6 +87,9 @@ Lo mismo pasa con las horas; "\* 1 \* \* \*" querrá decir que el comando se eje
 
 Se pueden combinar entre sí, dando multitud de opciones.
 
+## De principiante a profesional
+Visita: https://web.archive.org/web/20220714074602/https://geekflare.com/es/crontab-linux-with-real-time-examples-and-tools/ para entender mejor cómo funciona cron.
+
 ## Infraestructura necesaria para este proyecto
 - (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS para ir viendo los cambios mediante una GUI. Por ejemplo, DBeaver (https://dbeaver.io/)
 - (Requerido) Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas) con comandos:
