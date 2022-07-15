@@ -4,9 +4,6 @@
 
 source ./script_coberturas-APIaPostgreSQL-PROD-variables.sh
 
-# Este comando borra el contenido de la tabla
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE TABLE $tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" #; exit 1
-
 echo "-Descargamos el CSV de todos los datos de cobertura mediante la API"
 
 # Se usará la URL especificada en urlAPI para descargar todo el histórico de coberturas y se guardará en la carpeta indicada con el formato AÑOMESDÍA.csv (por ejemplo, 300522; 30 de mayo del 2022)
@@ -19,6 +16,9 @@ if cat $rutaficheroCSV | head -n1 | grep "fecha" ; then
 else
         echo "-La primera línea de encabezados no existe, se procede a continuar con el script-"
 fi
+
+# Este comando borra el contenido de la tabla
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE TABLE $tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" #; exit 1
 
 echo "-Importamos el CSV que hemos descargado a la tabla: $tablaBBDD-"
 psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $esquemaBBDD.$tablaBBDD (fecha, categoria, calidad, municipio, ine, modelo, so, tipored, operador, coordenadax, coordenaday, latitud, longitud, valorintensidadsenial, rangointensidadsenial, velocidadbajada, rangovelocidadbajada, velocidadsubida, rangovelocidadsubida, latencia, rangolatencia) FROM $rutaficheroCSV DELIMITER ';' CSV;" && echo "-CSV importado correctamente-" || echo "-Ha habido un problema al importar el CSV-" #; exit 1
