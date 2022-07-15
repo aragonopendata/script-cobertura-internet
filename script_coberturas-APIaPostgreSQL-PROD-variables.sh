@@ -16,4 +16,4 @@ rutacarpetaCSV="[RUTA CARPETA DONDE SE GUARDARÁ EL CSV DE LA API, ACABADO EN '/
 # Combina la variable $rutacarpetaCSV con el nombre del archivo, que será la fecha con formato estilo 20220631 (AÑOMESDÍA)
 rutaficheroCSV="$rutacarpetaCSV`date +%G%m%d`.csv"
 # URL de la API de OpenData
-urlAPI="[URL DE LA API]"
+urlAPI="[URL DE LA API. Ver README.md para saber cómo obtenerla]"
