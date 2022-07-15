@@ -1,4 +1,7 @@
 > **Warning**:
+> **¡¡¡ NO FUNCIONAL: SE REQUIEREN CAMBIOS QUE SE REALIZARÁN EN LA SEMANA DEL 18/07 !!!**
+
+> **Warning**:
 > Proyecto en pruebas 👷‍♀️🚧👷‍. **No cambiar visualización a repositorio público**
 
 > **Note**
