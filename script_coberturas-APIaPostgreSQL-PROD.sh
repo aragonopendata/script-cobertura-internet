@@ -2,7 +2,7 @@
 # Script por: danidemingo (por si tiene cualquier duda sobre el script)
 # NOTA: Este script se ejecuta automáticamente, no requiere entrada por parte del usuario mas que rellenar correctamente las variables abajo descritas.
 
-source ./script_coberturas-APIaPostgreSQL-PROD-variables.sh
+source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh
 
 echo "-Descargamos el CSV de todos los datos de cobertura mediante la API"
 
