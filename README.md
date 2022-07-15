@@ -13,7 +13,7 @@ Se pretende el siguiente flujo:
 ## Creación de la tabla
 Procederemos a **crear la tabla** desde la que después partiremos:
 ```sql
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "
+psql postgresql://[usuarioBBDD]:[passwordBBDD]@[hostBBDD]/[nombreBBDD] -c "
 CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         fecha timestamp,
         categoria varchar,
