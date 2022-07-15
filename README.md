@@ -13,6 +13,7 @@ Se pretende el siguiente flujo:
 ## Creación de la tabla
 Procederemos a **crear la tabla** desde la que después partiremos:
 ```sql
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "
 CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         fecha timestamp,
         categoria varchar,
@@ -36,7 +37,7 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         latencia float8,
         rangolatencia int4,
         geom geometry(geometry, 4326)
-);
+);"
 ```
 
 ## Logs (duplicado en Automatización. Este apartado quedará para README.md público, y Automatización para el README.md privado)
