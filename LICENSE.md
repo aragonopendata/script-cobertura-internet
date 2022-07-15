@@ -24,44 +24,44 @@ o haya expresado por cualquier otro medio su voluntad de conceder una licencia c
 
 En la presente licencia, se entenderá por:
 
-— «licencia»: la presente licencia,
+- «licencia»: la presente licencia,
 
-— «obra original»: la obra o el programa de ordenador distribuido o comunicado por el licenciante con arreglo a la presente licencia en forma de código fuente o, en su caso, de código ejecutable,
+- «obra original»: la obra o el programa de ordenador distribuido o comunicado por el licenciante con arreglo a la presente licencia en forma de código fuente o, en su caso, de código ejecutable,
 
-— «obras derivadas»: las obras o programas de ordenador que pudiera crear el licenciatario sobre la base de la obra original o de alguna de las modificaciones de esta. La presente licencia no define el grado de modificación o dependencia de la obra original necesario para clasificar una obra como derivada; dicho grado se determinará de acuerdo con la legislación sobre derechos de autor aplicable con arreglo al artículo 15,
+- «obras derivadas»: las obras o programas de ordenador que pudiera crear el licenciatario sobre la base de la obra original o de alguna de las modificaciones de esta. La presente licencia no define el grado de modificación o dependencia de la obra original necesario para clasificar una obra como derivada; dicho grado se determinará de acuerdo con la legislación sobre derechos de autor aplicable con arreglo al artículo 15,
 
-— «obra»: la obra original o sus obras derivadas,
+- «obra»: la obra original o sus obras derivadas,
 
-— «código fuente»: la forma de la obra legible por seres humanos que pueda ser estudiada y modificada más fácilmente,
+- «código fuente»: la forma de la obra legible por seres humanos que pueda ser estudiada y modificada más fácilmente,
 
-— «código ejecutable»: cualquier código, en general compilado, destinado a ser interpretado como programa por un ordenador,
+- «código ejecutable»: cualquier código, en general compilado, destinado a ser interpretado como programa por un ordenador,
 
-— «licenciante»: la persona física o jurídica que distribuye o comunica la obra con arreglo a la licencia,
+- «licenciante»: la persona física o jurídica que distribuye o comunica la obra con arreglo a la licencia,
 
-— «colaborador»: la persona física o jurídica que modifica la obra con arreglo a la licencia o contribuye de cualquier otra manera a crear una obra derivada,
+- «colaborador»: la persona física o jurídica que modifica la obra con arreglo a la licencia o contribuye de cualquier otra manera a crear una obra derivada,
 
-— «licenciatario»: la persona física o jurídica que hace un uso cualquiera de la obra en las condiciones fijadas en la licencia,
+- «licenciatario»: la persona física o jurídica que hace un uso cualquiera de la obra en las condiciones fijadas en la licencia,
 
-— «distribución» o «comunicación»: cualquier acto de venta, donación, préstamo, alquiler, distribución, comunicación, transmisión o cualquier otro acto de puesta a disposición, en línea o fuera de línea, de copias de la obra o de acceso a sus funcionalidades esenciales a otra persona física o jurídica.
+- «distribución» o «comunicación»: cualquier acto de venta, donación, préstamo, alquiler, distribución, comunicación, transmisión o cualquier otro acto de puesta a disposición, en línea o fuera de línea, de copias de la obra o de acceso a sus funcionalidades esenciales a otra persona física o jurídica.
 
 2\. Ámbito de los derechos otorgados por la Licencia
 ----------------------------------------------------
 
 El licenciante concede al licenciatario una licencia de ámbito mundial, a título gratuito, no exclusiva y que el licenciatario puede subcontratar mientras sigan vigentes los derechos de autor sobre la obra original, y lo autoriza a:
 
-— utilizar la obra en cualquier circunstancia y para cualquier uso,
+- utilizar la obra en cualquier circunstancia y para cualquier uso,
 
-— reproducir la obra,
+- reproducir la obra,
 
-— modificar la obra y realizar obras derivadas de la misma,
+- modificar la obra y realizar obras derivadas de la misma,
 
-— comunicar al público la obra o copias de la misma, poner a su disposición o exhibir la obra o las copias y, en su caso, ejecutar públicamente la obra,
+- comunicar al público la obra o copias de la misma, poner a su disposición o exhibir la obra o las copias y, en su caso, ejecutar públicamente la obra,
 
-— distribuir la obra o copias de la misma,
+- distribuir la obra o copias de la misma,
 
-— prestar y alquilar la obra o copias de la misma,
+- prestar y alquilar la obra o copias de la misma,
 
-— subcontratar los derechos relativos a la obra o a las copias de la misma.
+- subcontratar los derechos relativos a la obra o a las copias de la misma.
 
 Dichos derechos se podrán ejercer a través de cualquier medio, soporte y formato, conocido en el presente o que pueda inventarse en el futuro, en la medida en que así lo permita la legislación aplicable.
 
@@ -153,43 +153,43 @@ Todas las versiones lingüísticas de la presente licencia aprobadas por la Comi
 
 Sin perjuicio de lo dispuesto en un acuerdo específico entre las partes,
 
-— los litigios relativos a la interpretación de la presente licencia que se planteen entre las instituciones, órganos y organismos de la Unión Europea, en calidad de licenciante, y un licenciatario, se someterán a la jurisdicción del Tribunal de Justicia de la Unión Europea, con arreglo al artículo 272 del Tratado de Funcionamiento de la Unión Europea;
+- los litigios relativos a la interpretación de la presente licencia que se planteen entre las instituciones, órganos y organismos de la Unión Europea, en calidad de licenciante, y un licenciatario, se someterán a la jurisdicción del Tribunal de Justicia de la Unión Europea, con arreglo al artículo 272 del Tratado de Funcionamiento de la Unión Europea;
 
-— los litigios relativos la interpretación de la presente licencia que se planteen entre otras partes se someterán a la jurisdicción exclusiva del tribunal que sea competente en el lugar en que resida o ejerza su actividad principal el licenciante.
+- los litigios relativos la interpretación de la presente licencia que se planteen entre otras partes se someterán a la jurisdicción exclusiva del tribunal que sea competente en el lugar en que resida o ejerza su actividad principal el licenciante.
 
 15\. Legislación aplicable
 --------------------------
 
 Sin perjuicio de lo dispuesto en un acuerdo específico entre las partes,
 
-— la presente licencia se regirá por la legislación del Estado miembro de la Unión Europea en el que tenga su sede, resida o tenga su domicilio social el licenciante;
+- la presente licencia se regirá por la legislación del Estado miembro de la Unión Europea en el que tenga su sede, resida o tenga su domicilio social el licenciante;
 
-— la presente licencia se regirá por el Derecho belga si el licenciante no tiene sede, residencia ni domicilio social en un Estado miembro de la Unión Europea.
+- la presente licencia se regirá por el Derecho belga si el licenciante no tiene sede, residencia ni domicilio social en un Estado miembro de la Unión Europea.
 
 Apéndice
 --------
 
 Son «licencias compatibles» con arreglo al artículo 5 de la EUPL:
 
-— GNU General Public License (GPL) v. 2, v. 3
+- GNU General Public License (GPL) v. 2, v. 3
 
-— GNU Affero General Public License (AGPL) v. 3
+- GNU Affero General Public License (AGPL) v. 3
 
-— Open Software License (OSL) v. 2.1, v. 3.0
+- Open Software License (OSL) v. 2.1, v. 3.0
 
-— Eclipse Public License (EPL) v. 1.0
+- Eclipse Public License (EPL) v. 1.0
 
-— CeCILL v. 2.0, v. 2.1
+- CeCILL v. 2.0, v. 2.1
 
-— Mozilla Public Licence (MPL) v. 2
+- Mozilla Public Licence (MPL) v. 2
 
-— GNU Lesser General Public Licence (LGPL) v. 2.1, v. 3
+- GNU Lesser General Public Licence (LGPL) v. 2.1, v. 3
 
-— Creative Commons Attribution-ShareAlike v. 3.0 Unported (CC BY-SA 3.0) para obras que no sean programas informáticos
+- Creative Commons Attribution-ShareAlike v. 3.0 Unported (CC BY-SA 3.0) para obras que no sean programas informáticos
 
-— European Union Public Licence (EUPL) v. 1.1, v. 1.2
+- European Union Public Licence (EUPL) v. 1.1, v. 1.2
 
-— Québec Free and Open-Source Licence — Reciprocity (LiLiQ-R) or Strong Reciprocity (LiLiQ-R+)
+- Québec Free and Open-Source Licence - Reciprocity (LiLiQ-R) or Strong Reciprocity (LiLiQ-R+)
 
 La Comisión Europea podrá actualizar el presente apéndice a versiones posteriores de las licencias mencionadas sin presentar una nueva versión de la EUPL, siempre que contemplen los derechos reconocidos en el artículo 2 de la presente licencia y protejan de la apropiación exclusiva el código fuente cubierto.
 
