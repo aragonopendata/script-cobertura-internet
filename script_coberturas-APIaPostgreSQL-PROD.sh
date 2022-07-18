@@ -23,12 +23,14 @@ psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE 
 echo "-Importamos el CSV que hemos descargado a la tabla: $tablaBBDD-"
 psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $esquemaBBDD.$tablaBBDD (fecha, categoria, calidad, municipio, ine, modelo, so, tipored, operador, coordenadax, coordenaday, latitud, longitud, valorintensidadsenial, rangointensidadsenial, velocidadbajada, rangovelocidadbajada, velocidadsubida, rangovelocidadsubida, latencia, rangolatencia) FROM $rutaficheroCSV DELIMITER ';' CSV;" && echo "-CSV importado correctamente-" || { echo "-Ha habido un problema al importar el CSV-" && exit 1; }
 
-# Este comando hace el POINT de los campos latitud y longitud de la tabla. Por tanto, los datos de la tabla deben de importarse antes de hacer este comando para que los campos latitud y longitud estén llenos.
+# Este comando hace el POINT con un SRC 4326 de los campos latitud y longitud de la tabla. Por tanto, los datos de la tabla deben de importarse antes de hacer este comando para que los campos latitud y longitud estén llenos.
 echo "-Poblamos la columna geom utilizando las columnas latitud y longitud de esta misma tabla-"
 psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET geom = ST_SetSRID(ST_MakePoint(longitud, latitud), 4326);" && echo "-Columna geom poblada correctamente-" || { echo "-Ha habido un problema al poblar la columna geom-" && exit 1; }
 
-# Este comando hace una cuadrícula de 500mx500m a partir del campo geom de la tabla que acabamos de poblar.
-echo "-Poblamos la columna square utilizando la columna geom de esta misma tabla-"
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET square = ST_Buffer(shape, 250, 'endcap=square join=round');" && echo "-Columna square poblada correctamente-" || { echo "-Ha habido un problema al poblar la columna square-" && exit 1; }
+# Este comando transforma el SRC del campo anterior (geom) al SRC 25830 haciendo un UPDATE en la columna geom_28530. Por tanto, tendremos una columna llamada geom con un SRC de 4326 y una columna (esta) llamaada geom_25830 que tendrá un SRC de 25830
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE ddemingo.nombretablajulio SET geom_25830 = ST_Transform(geom, 25830);" && echo "-Conversión de SRC 4326 a 25830 que se vuelca en columna "geom_25830" completado con éxito-" || { echo "Error al convertir de 4326 a 25830 volcando el resultado en la columna geom_25830" && exit 1; }
+
+# Usamos la columna geom_25830 que tiene un SRC de 25830 para hacer un búfer cuadrado de 250 metros desde el punto central (por lo cual te saldrá un cuadrado de 500mx500m). Cabe decir que el campo que se coge (geom_25830) tiene que estar en SRC 25830, por eso hacemos toda la conversión en los pasos anteriores
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE ddemingo.nombretablajulio SET cuadricula = ST_Buffer(geom_25830, 250, 'endcap=square join=round');" && echo "Cuadrícula de 500x500 poblada en el campo cuadricula" || { echo "Fallo en poblar la cuadrícula de 500x500 poblada en el campo cuadricula" && exit 1; }
 
 echo "-Fin del script-"
