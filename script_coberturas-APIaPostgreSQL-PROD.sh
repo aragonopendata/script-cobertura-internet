@@ -18,7 +18,7 @@ else
 fi
 
 # Este comando borra el contenido de la tabla
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE TABLE $tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || { echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" && exit 1; }
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "TRUNCATE TABLE $esquemaBBDD.$tablaBBDD" && echo "-Contenido de la tabla: $tablaBBDD borrada correctamente-" || { echo "-Ha habido un error al borrar la tabla: $tablaBBDD-" && exit 1; }
 
 echo "-Importamos el CSV que hemos descargado a la tabla: $tablaBBDD-"
 psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $esquemaBBDD.$tablaBBDD (fecha, categoria, calidad, municipio, ine, modelo, so, tipored, operador, coordenadax, coordenaday, latitud, longitud, valorintensidadsenial, rangointensidadsenial, velocidadbajada, rangovelocidadbajada, velocidadsubida, rangovelocidadsubida, latencia, rangolatencia) FROM $rutaficheroCSV DELIMITER ';' CSV;" && echo "-CSV importado correctamente-" || { echo "-Ha habido un problema al importar el CSV-" && exit 1; }
