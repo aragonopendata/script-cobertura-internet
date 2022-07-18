@@ -66,7 +66,7 @@ La URL final, por tanto, sería: https://opendataei2a.aragon.es/cobertura/api/ +
 En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh) se explica la ejecución del script** paso a paso.
 
 ### Ruta para el fichero variables
-El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** debe guardarse en una ruta donde se tenga permisos de escritura. De hecho, deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]" visualizable en el comando "source" (línea 5 del script) por una ruta en la que se cumplan los requisitos explicados en este párrafo.
+**El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** debe guardarse en una ruta donde se tenga permisos de lectura y escritura**. De hecho, **deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]"** visualizable en el comando "source" (línea 5 del script) **por una ruta en la que se cumplan los requisitos explicados en este párrafo.**
 
 ## Automatización
 ### ¿Cómo la haremos?
