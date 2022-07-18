@@ -9,8 +9,7 @@
 # De Vodafone API a PostgreSQL con mapa incluido
 
 ## Intención
-Se pretende el siguiente flujo:
-
+Se pretende el siguiente flujo:\
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/schema.png)
 
 ## Creación de la tabla
@@ -60,6 +59,7 @@ Para obtener la url de la API y rellenar la variable urlAPI nos dirigiremos a: h
 Uniremos los campos marcados en rojo tal y como se muestra en la siguiente imagen:
 
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/swagger.png)
+
 La URL final, por tanto, sería: https://opendataei2a.aragon.es/cobertura/api/ + data/getData quedándose en: https://opendataei2a.aragon.es/cobertura/api/data/getData
 
 ### Script general
@@ -68,9 +68,10 @@ En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD
 ### Ruta para el fichero variables
 **El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** debe guardarse en una ruta donde se tenga permisos de lectura y escritura**. De hecho, **deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]"** visualizable en el comando "source" (línea 5 del script) **por una ruta en la que se cumplan los requisitos explicados en este párrafo.**
 
-La línea a la que se hace referencia es la siguiente:
-
-```source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh```
+La línea a la que se hace referencia es la siguiente:\
+```bash
+source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh
+```
 
 ## Automatización
 ### ¿Cómo la haremos?
