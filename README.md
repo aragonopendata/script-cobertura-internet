@@ -68,6 +68,10 @@ En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD
 ### Ruta para el fichero variables
 **El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** debe guardarse en una ruta donde se tenga permisos de lectura y escritura**. De hecho, **deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]"** visualizable en el comando "source" (línea 5 del script) **por una ruta en la que se cumplan los requisitos explicados en este párrafo.**
 
+La línea a la que se hace referencia es la siguiente:
+
+```source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh```
+
 ## Automatización
 ### ¿Cómo la haremos?
 Este proyecto **se automatizará con el demonio cron**. A continuación se verá un ejemplo de cómo proceder con dicha automatización.
