@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
         rangolatencia int4,
         geom geometry(geometry, 4326),
         geom_25830 geometry(geometry, 25830),
-        cuadricula geometry(geometry,25830)
+        cuadricula geometry(geometry, 25830)
 );"
 ```
 
