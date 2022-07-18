@@ -25,6 +25,10 @@ psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "\copy $es
 
 # Este comando hace el POINT de los campos latitud y longitud de la tabla. Por tanto, los datos de la tabla deben de importarse antes de hacer este comando para que los campos latitud y longitud estén llenos.
 echo "-Poblamos la columna geom utilizando las columnas latitud y longitud de esta misma tabla-"
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET geom = ST_SetSRID(ST_MakePoint(longitud, latitud), 4326);" && echo "-Columna poblada correctamente-" || { echo "-Ha habido un problema al poblar la columna-" && exit 1; }
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET geom = ST_SetSRID(ST_MakePoint(longitud, latitud), 4326);" && echo "-Columna geom poblada correctamente-" || { echo "-Ha habido un problema al poblar la columna geom-" && exit 1; }
+
+# Este comando hace una cuadrícula de 500mx500m a partir del campo geom de la tabla que acabamos de poblar.
+echo "-Poblamos la columna square utilizando la columna geom de esta misma tabla-"
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET square = ST_Buffer(shape, 250, 'endcap=square join=round');" && echo "-Columna square poblada correctamente-" || { echo "-Ha habido un problema al poblar la columna square-" && exit 1; }
 
 echo "-Fin del script-"
