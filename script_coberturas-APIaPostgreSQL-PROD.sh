@@ -30,10 +30,10 @@ psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $n
 
 # Este comando transforma el SRC del campo anterior (geom) al SRC 25830 haciendo un UPDATE en la columna geom_28530. Por tanto, tendremos una columna llamada geom con un SRC de 4326 y una columna (esta) llamaada geom_25830 que tendrá un SRC de 25830
 echo "-Convertimos el SRC 4326 de la columna geom a SRC 25830 a la columna geom_25830-"
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE ddemingo.nombretablajulio SET geom_25830 = ST_Transform(geom, 25830);" && echo "-Conversión de SRC 4326 a 25830 que se vuelca en columna "geom_25830" completado con éxito-" || { echo "Error al convertir de 4326 a 25830 volcando el resultado en la columna geom_25830" && exit 1; }
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET geom_25830 = ST_Transform(geom, 25830);" && echo "-Conversión de SRC 4326 a 25830 que se vuelca en columna "geom_25830" completado con éxito-" || { echo "Error al convertir de 4326 a 25830 volcando el resultado en la columna geom_25830" && exit 1; }
 
 # Usamos la columna geom_25830 que tiene un SRC de 25830 para hacer un búfer cuadrado de 250 metros desde el punto central (por lo cual te saldrá un cuadrado de 500mx500m). Cabe decir que el campo que se coge (geom_25830) tiene que estar en SRC 25830, por eso hacemos toda la conversión en los pasos anteriores
 echo "-Poblamos el campo cuadricula con una cuadrícula de radio 250m desde el punto central, obteniendo un cuadrado de 500mx500m-"
-psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE ddemingo.nombretablajulio SET cuadricula = ST_Buffer(geom_25830, 250, 'endcap=square join=round');" && echo "Cuadrícula de 500x500 poblada en el campo cuadricula" || { echo "Fallo en poblar la cuadrícula de 500x500 poblada en el campo cuadricula" && exit 1; }
+psql postgresql://$usuarioBBDD:$passwordBBDD@$hostBBDD/$nombreBBDD -c "UPDATE $nombreBBDD.$esquemaBBDD.$tablaBBDD SET cuadricula = ST_Buffer(geom_25830, 250, 'endcap=square join=round');" && echo "Cuadrícula de 500x500 poblada en el campo cuadricula" || { echo "Fallo en poblar la cuadrícula de 500x500 poblada en el campo cuadricula" && exit 1; }
 
 echo "-Fin del script-"
