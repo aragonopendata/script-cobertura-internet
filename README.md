@@ -12,8 +12,15 @@ Se pretende el siguiente flujo:\
 ## Privacidad
 **La privacidad es uno de los pilares de este proyecto.** Para entender a qué punto la hemos tenido en cuenta debes saber que **hemos dividido Aragón en teselas de 500x500 metros**. Cuando un dispositivo hace una medición y envía su ubicación nosotros **sólo guardamos la parcela de 500x500 metros a la que pertenece el dispositivo** (basado, como se ha dicho, en su ubicación), por lo que ni nosotros ni nadie podrá saber la ubicación exacta del dispositivo una vez haya finalizado el test y se hayan guardado los datos correctamente.
 
-Pongamos un ejemplo: digamos que hemos enviado los datos exactamente desde esta posición:
+Pongamos un ejemplo; digamos que hemos enviado los datos exactamente desde esta posición:
+
+**Nuestra posición exacta está marcada como un punto amarillo en el mapa**\
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/ubicacion_exacta.png)
+
+Una vez haya finalizado el test, la información que quedará guardada será que se ha hecho una medición dentro de esta parcela:
+
+**No se podrá saber desde qué punto exacto se ha hecho la medición. Sólo se mostrará que la medición se ha hecho en esa parcela de 500x500 metros, tal y como se ha explicado antes**\
+![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/ubicacion_guardada.png)
 
 ## Creación de la tabla
 Procederemos a **crear la tabla** desde la que después partiremos:
