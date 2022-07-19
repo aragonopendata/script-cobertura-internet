@@ -9,6 +9,9 @@
 Se pretende el siguiente flujo:\
 ![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/schema.png)
 
+## Privacidad
+**La privacidad es uno de los pilares de este proyecto.** Para entender a qué punto la hemos tenido en cuenta debes saber que **hemos dividido Aragón en teselas de 500x500 metros**. Cuando un dispositivo hace una medición y envía su ubicación nosotros **sólo guardamos la parcela de 500x500 metros a la que pertenece el dispositivo** (basado, como se ha dicho, en su ubicación), por lo que ni nosotros ni nadie podrá saber la ubicación exacta del dispositivo una vez haya finalizado el test y se hayan guardado los datos correctamente.
+
 ## Creación de la tabla
 Procederemos a **crear la tabla** desde la que después partiremos:
 ```sql
