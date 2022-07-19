@@ -6,7 +6,7 @@ source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaP
 
 echo "-Descargamos el CSV de todos los datos de cobertura mediante la API"
 
-# Se usará la URL especificada en urlAPI para descargar todo el histórico de coberturas y se guardará en la carpeta indicada con el formato AÑOMESDÍA.csv (por ejemplo, 300522; 30 de mayo del 2022)
+# Se usará la URL especificada en urlAPI para descargar todo el histórico de coberturas y se guardará en la carpeta indicada con el formato AÑOMESDÍA.csv (por ejemplo, 20220530; 30 de mayo del 2022)
 curl --header "Accept: text/csv" -v $urlAPI -o $rutaficheroCSV && echo "-Se ha descargado el CSV de la API correctamente-" || { echo "-Ha habido un problema al descargar el CSV de la API-" && exit 1; }
 
 echo "-Realizamos un if. Si detecta que el fichero CSV descargado contiene encabezados borrará dicha línea. Si no hay encabezado nos mostrará un mensaje diciendo que dicha línea ya está eliminada-"
