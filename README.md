@@ -115,7 +115,7 @@ Visita: https://web.archive.org/web/20220714074602/https://geekflare.com/es/cron
 
 ### Implantación
 Para implantar la automatización de este script tendremos en cuenta que lo correremos el día 1 del mes a las 00:05 AM, por lo que la entrada del cron quedaría:\
-```5 0 1 \* \* [RUTA AL SCRIPT.sh] > /var/log/`date +\%G\%m\%d`.log 2>&1```
+```5 0 1 * * [RUTA AL SCRIPT.sh] > /var/log/`date +\%G\%m\%d`.log 2>&1```
 
 ## Infraestructura necesaria para este proyecto
 - (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS para ir viendo los cambios mediante una GUI. Por ejemplo, DBeaver (https://dbeaver.io/)
