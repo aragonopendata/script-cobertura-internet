@@ -11,7 +11,7 @@ curl --header "Accept: text/csv" -v $urlAPI -o $rutaficheroCSV && echo "-Se ha d
 
 echo "-Realizamos un if. Si detecta que el fichero CSV descargado contiene encabezados borrará dicha línea. Si no hay encabezado nos mostrará un mensaje diciendo que dicha línea ya está eliminada-"
 if cat $rutaficheroCSV | head -n1 | grep "fecha" ; then
-        echo "-Se ha detectado la primera línea de encabezados. Se procede borrarla-"
+        echo "-Se ha detectado la primera línea de encabezados. Se procede a borrarla-"
         sed -i '1d' $rutaficheroCSV && echo "-Se ha borrado la línea de encabezados correctamente-" || { echo "Ha habido un problema al borrar la primera línea de encabezados" && exit 1; }
 else
         echo "-La primera línea de encabezados no existe, se procede a continuar con el script-"
