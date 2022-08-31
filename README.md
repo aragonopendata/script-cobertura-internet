@@ -75,6 +75,8 @@ rutacarpetaCSV="[RUTA CARPETA DONDE SE GUARDARÁ EL CSV DE LA API, ACABADO EN '/
 
 Antes de ejecutar script es necesario tener creada la carpeta  donde se dejará el fichero CSV que se obtiene de la API.
 
+Dicha carpeta tendrá que tener accesos de escritura / lectura para el usuario de ejecución.
+
 ### Script general
 En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL.sh](./script_coberturas-APIaPostgreSQL.sh) se explica la ejecución del script** paso a paso.
 
