@@ -54,14 +54,9 @@ CREATE TABLE IF NOT EXISTS [nombreBBDD].[esquemaBBDD].[tablaBBDD] (
 );"
 ```
 
-## Logs (duplicado en Automatización. Este apartado quedará para README.md público, y Automatización para el README.md privado)
-Guardaremos un archivo de log en /var/log/script-cobertura-internet/AÑOMESDÍA.log
-
-Para ello debemos crear la carpeta /var/log/script-cobertura-internet con el comando: ```sudo mkdir /var/log/script-cobertura-internet``` y dar permisos de escritura al usuario con el que estemos trabajando con el comando: ```sudo chown [TU USUARIO]:[TU USUARIO] /var/log/script-cobertura-internet```, es decir, por ejemplo: ```sudo chown pedro:pedro /var/log/script-cobertura-internet``` (aquí realmente estamos cambiando el autor de la carpeta /var/log/script-cobertura-internet de root:root a pedro:pedro, o el usuario que hayas introducido. Así tendremos permisos de escritura sobre esta carpeta
-
 ## Explicación
 ### Script para las variables
-El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** **contiene todas las variables necesarias** para que el script del proyecto funcione correctamente. Asimismo se explica qué función tiene cada variable.
+El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-variables.sh](./script_coberturas-APIaPostgreSQL-variables.sh)** **contiene todas las variables necesarias** para que el script del proyecto funcione correctamente. Asimismo se explica qué función tiene cada variable.
 #### Variable urlAPI
 La variable urlAPI se consigue mediante la aplicación web Swagger, publicada en Aragon Open Data. Se muestra dicho proceso de obtención:
 ##### Obtención
@@ -74,15 +69,21 @@ Uniremos los campos marcados en rojo tal y como se muestra en la siguiente image
 
 La URL final, por tanto, sería: https://opendataei2a.aragon.es/cobertura/api/ + data/getData quedándose en: https://opendataei2a.aragon.es/cobertura/api/data/getData
 
+#### Variable rutacarpetaCSV
+
+rutacarpetaCSV="[RUTA CARPETA DONDE SE GUARDARÁ EL CSV DE LA API, ACABADO EN '/
+
+Antes de ejecutar script es necesario tener creada la carpeta  donde se dejará el fichero CSV que se obtiene de la API.
+
 ### Script general
-En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh) se explica la ejecución del script** paso a paso.
+En el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL.sh](./script_coberturas-APIaPostgreSQL.sh) se explica la ejecución del script** paso a paso.
 
 ### Ruta para el fichero variables
-**El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** debe guardarse en una ruta donde se tenga permisos de lectura y escritura**. De hecho, **deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]"** visualizable en el comando "source" (línea 5 del script) **por la ruta de la carpeta donde se encuentre el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD-variables.sh](./script_coberturas-APIaPostgreSQL-PROD-variables.sh)** y en la que se cumplan los requisitos explicados en este párrafo.**
+**El fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-variables.sh](./script_coberturas-APIaPostgreSQL-variables.sh)** debe guardarse en una ruta donde se tenga permisos de lectura y escritura**. De hecho, **deberemos acceder al fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL.sh](./script_coberturas-APIaPostgreSQL.sh)** y cambiar a mano el corchete "[CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]"** visualizable en el comando "source" (línea 5 del script) **por la ruta de la carpeta donde se encuentre el fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-variables.sh](./script_coberturas-APIaPostgreSQL-variables.sh)** y en la que se cumplan los requisitos explicados en este párrafo.**
 
-La línea del fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL-PROD.sh](./script_coberturas-APIaPostgreSQL-PROD.sh)** a la que se hace referencia es la siguiente:
+La línea del fichero **script-cobertura-internet/[script_coberturas-APIaPostgreSQL.sh](./script_coberturas-APIaPostgreSQL.sh)** a la que se hace referencia es la siguiente:
 ```bash
-source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh
+source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-variables.sh
 ```
 
 ## Infraestructura necesaria para este proyecto
