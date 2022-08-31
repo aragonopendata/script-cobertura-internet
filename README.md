@@ -85,38 +85,6 @@ La línea del fichero **script-cobertura-internet/[script_coberturas-APIaPostgre
 source [CARPETA DONDE ESTÉ EL ARCHIVO DE LAS VARIABLES]/script_coberturas-APIaPostgreSQL-PROD-variables.sh
 ```
 
-## Automatización
-### ¿Cómo la haremos?
-Este proyecto **se automatizará con el demonio cron**. A continuación se verá un ejemplo de cómo proceder con dicha automatización.
-### ¿Por qué añadimos 2>&1 y qué quiere decir?
-**Se añade "2>&1"** al final para **mostrar** tanto **stdout como stderr**, para que así **podamos ver** en el log **cualquier error**, **incluyendo** los **errores que pueda provocar el sistema** y que no estén contemplados en el script a través de los "OR".
-### Automatizaciones cada X minutos
-En  ejemplo se muestra una actualización de 5 minutos. Es decir, cada 5 minutos se ejecutará el script:
-
-**INPUT:** ```*/5 * * * * [RUTA AL SCRIPT.sh] > /var/log/`date +\%G\%m\%d`.log 2>&1```
-
-**OUTPUT:** El script se ejecutará y dejará un log como el siguiente ejemplo: /var/log/script-cobertura-internet/220724.log cuyo formato quiere decir AÑOMESDÍA.log, para lo cual **primero de todo debemos crear la carpeta /var/log/script-cobertura-internet** con el comando: ```sudo mkdir /var/log/script-cobertura-internet``` y dar permisos de escritura al usuario con el que estemos trabajando con el comando: ```sudo chown [TU USUARIO]:[TU USUARIO] /var/log/script-cobertura-internet```, es decir, por ejemplo: ```sudo chown pedro:pedro /var/log/script-cobertura-internet``` (aquí realmente estamos cambiando el autor de la carpeta /var/log/script-cobertura-internet de root:root a pedro:pedro, o el usuario que hayas introducido. Así tendremos permisos de escritura sobre esta carpeta
-
-#### ¿Cómo las añadimos al cron?
-**Para añadirlo al cron ejecutamos:**
-```crontab -e```. Es probable que nos solicite un editor de texto. Para facilitar la tarea es recomendable seleccionar el editor "**nano**" (es el más amigable para usuarios que no conocen otras alternativas en entornos Linux).
-Ahora sí, **pegaremos la línea del cron arriba descrita con el patrón de actualización que queramos**. A continuación se muestra el patrón que usa cron para establecer el período de actualización deseado:
-
-![alt text](https://github.com/aragonopendata/script-cobertura-internet/blob/main/images/cron.png)
-
-### Algunas aclaraciones
-Es interesante saber que "1 \* \* \* \*" querrá decir que el comando se ejecutará en el minuto 1 de todas las horas, mientras que "\*\/1 \* \* \* \*" quiere decir que se ejecutará cada minuto.\
-Lo mismo pasa con las horas; "\* 1 \* \* \*" querrá decir que el comando se ejecutará a la 1:00 AM, mientras que "\* \*\/1 \* \* \*" quiere decir que se ejecutará cada hora del día.
-
-Se pueden combinar entre sí, dando multitud de opciones.
-
-### De principiante a profesional
-Visita: https://web.archive.org/web/20220714074602/https://geekflare.com/es/crontab-linux-with-real-time-examples-and-tools/ para entender mejor cómo funciona cron.
-
-### Implantación
-Para implantar la automatización de este script tendremos en cuenta que lo correremos el día 1 del mes a las 00:05 AM, por lo que la entrada del cron quedaría:\
-```5 0 1 * * [RUTA AL SCRIPT.sh] > /var/log/`date +\%G\%m\%d`.log 2>&1```
-
 ## Infraestructura necesaria para este proyecto
 - (Recomendado) Gestor de bases de datos PostgreSQL con PostGIS para ir viendo los cambios mediante una GUI. Por ejemplo, DBeaver (https://dbeaver.io/)
 - (Requerido) Máquina Linux Debian/Fedora (la distribución es prácticamente indiferente pues usamos comandos que suelen estar en todas ellas) con comandos:
