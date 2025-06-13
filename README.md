@@ -1,10 +1,11 @@
 ![Estado del proyecto: Archivado](https://img.shields.io/badge/estado-archivado-lightgrey)
 
 > ⚠️ **Este repositorio ha sido archivado** ⚠️
+> 
 > El desarrollo se ha dividido en dos repositorios separados:
 > 
 > - 🌐 [Web Service (página web)](https://github.com/aragonopendata/calidad-cobertura-internet-ws)
-> - 📱 [App (móvil)](https://github.com/aragonopendata/calidad-cobertura-internet-app)
+> - 📱 [App (dispositivos móviles)](https://github.com/aragonopendata/calidad-cobertura-internet-app)
 > 
 > Este repositorio ya no se mantiene y los endpoints de las APIs han cambiado, por lo que se recomiénda encarecidamente consultar los enlaces anteriores para el desarrollo activo
 
